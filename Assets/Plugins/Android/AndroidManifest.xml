@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Unity 自定义 Manifest：必须自带 UnityPlayerActivity 的 MAIN/LAUNCHER 声明，否则桌面无图标 -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.unity3d.player">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+
+    <application android:usesCleartextTraffic="true"
+        android:hardwareAccelerated="true">
+
+        <activity android:name="com.unity3d.player.UnityPlayerActivity"
+            android:theme="@style/UnityThemeSelector"
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|screenLayout|uiMode|density|fontScale|mcc|mnc|navigation|keyboard|locale|touchscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+        </activity>
+
+    </application>
+</manifest>

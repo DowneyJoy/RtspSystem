@@ -1,0 +1,9 @@
+{
+  "channels": [
+    { "name": "CAM1 · 彩条 1280×720", "url": "rtsp://127.0.0.1:8554/cam1" },
+    { "name": "CAM2 · 渐变噪点 1280×720", "url": "rtsp://127.0.0.1:8554/cam2" },
+    { "name": "CAM3 · SMPTE 彩条 640×480", "url": "rtsp://127.0.0.1:8554/cam3" },
+    { "name": "CAM4 · 彩条 + 440Hz AAC", "url": "rtsp://127.0.0.1:8554/cam4", "audio": true }
+  ],
+  "androidHost": "192.168.0.71"
+}
